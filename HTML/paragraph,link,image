@@ -1,0 +1,200 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "<p>This is a paragraph.</p>\n",
+    "<hr>\n",
+    "<p>This is another paragraph <br>with new line.</p> "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<p>This is a paragraph.</p>\n",
+    "<hr>\n",
+    "<p>This is another paragraph <br>with new line.</p> "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "<p style=\"background-color:gray;color:rgba(255, 99, 71, 0.9);\">This is a paragraph.</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<p style=\"background-color:gray;color:rgba(255, 99, 71, 0.9);\">This is a paragraph.</p>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " Defines pre-formatted text:\n",
+    " <pre>\n",
+    "      My Bonnie lies over the ocean.\n",
+    "\n",
+    "  My Bonnie lies over the sea.\n",
+    "\n",
+    " My Bonnie lies over the ocean.\n",
+    "  Oh, bring back my Bonnie to me.\n",
+    "</pre> "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Defines pre-formatted text:\n",
+    "<pre>\n",
+    "      My Bonnie lies over the ocean.\n",
+    "\n",
+    "  My Bonnie lies over the sea.\n",
+    "\n",
+    " My Bonnie lies over the ocean.\n",
+    "  Oh, bring back my Bonnie to me.\n",
+    "</pre> "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h1> Summary: </h1>\n",
+    "<ul>\n",
+    "  <li>Use <code>&lt;p&gt;</code> to define paragraph</li>\n",
+    "  <li>Use <code>&lt;br&gt;</code> to insert $new line$</li>\n",
+    "  <li>Use <code>&lt;pre&gt;</code> to define pre-formatted text</li>\n",
+    "</ul>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "<a href=\"https://www.w3schools.com\">This is a link for HTML</a> "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a href=\"https://www.w3schools.com\">This is a link for HTML</a> "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "<img src=\"test.jpg\" alt=\"One_piece\" width=\"340\" height=\"236\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"test.jpg\" alt=\"One piece\" width=\"340\" height=\"236\"> \n",
+    "<p>The value of the $alt$ attribute should describe the image.<br>If a browser cannot find an image, it will display the value of the $alt$ attribute.</p>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "<ul>\n",
+    "  <li>Coffee</li>\n",
+    "  <li>Tea</li>\n",
+    "  <li>Milk</li>\n",
+    "</ul>\n",
+    "\n",
+    "<ol>\n",
+    "  <li>Coffee</li>\n",
+    "  <li>Tea</li>\n",
+    "  <li>Milk</li>\n",
+    "</ol> "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " <ul>\n",
+    "  <li>Coffee</li>\n",
+    "  <li>Tea</li>\n",
+    "  <li>Milk</li>\n",
+    "</ul>\n",
+    "\n",
+    "<ol>\n",
+    "  <li>Coffee</li>\n",
+    "  <li>Tea</li>\n",
+    "  <li>Milk</li>\n",
+    "</ol> "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Triple backticks(```) for code blocks:\n",
+    "\n",
+    "```python\n",
+    "class TestClass:\n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```python\n",
+    "class TestClass:\n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "```"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
