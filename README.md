@@ -1,4 +1,3 @@
 # Tutorials
-Anything here.
-Edited by ZXY.
+Record the codes from a vegetable chicken.
 
