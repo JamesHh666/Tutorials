@@ -1,6 +1,5 @@
 # Binary search:
 
----
 ```python
 class Solution(object):
     def searchRange(self, nums, target):
@@ -56,14 +55,13 @@ class Solution(object):
             
         # 2 Find first and last position
         return [binary_search_to_left(hi[1], nums, target), binary_search_to_right(lo[2], nums, target)]
-    ```
-***
+```
+
 ### Result:
 **Runtime**: 64 ms, faster than 93.28% of Python online submissions for Find First and Last Position of Element in Sorted Array. 
 
 **Memory Usage**: 13 MB, less than 79.41% of Python online submissions for Find First and Last Position of Element in Sorted Array.
 
-***
 ### Coding problem:
 1. **Not concise**, because I:
     * Firstly try to find **weather** target is **in** the nums and
@@ -73,6 +71,7 @@ The first step can be improved to **directly** find the leftmost index
 
 ***
 ## The imporved version:
+
 ```python
 class Solution(object):
 def searchRange(self, nums, target):
@@ -94,15 +93,14 @@ def searchRange(self, nums, target):
 
     return [lo, binary_search(nums, target, lo=lo, hi=len(nums), left=False)-1]
 ```
-***
+
 ### Result: (seems almost the same)
 **Runtime**: 64 ms, faster than 93.28% of Python online submissions for Find First and Last Position of Element in Sorted Array.
 
 **Memory Usage**: 12.9 MB, less than 94.12% of Python online submissions for Find First and Last Position of Element in Sorted Array.
 
-
 Code notice:
 1. Finding the leftmost one is easy and intuitive using the code above, but as for the rightmost one, it is a little bit tricky:
     * The `hi` boudary should be **len(nums)** instead of **len(nums) - 1**, because otherwise the `mid` cannot reach and check whether the value at `nums[len(nums) - 1]` equals to target.
     * The returned `lo` is 1 larger than the true value, need to **-1**
-    
+   
