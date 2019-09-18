@@ -319,6 +319,37 @@ class Solution(object):
 
 **Notice:** To reverse *part* of list, `list[2:4].reverse()` won't work, it just return `None`. Thanks to [Reman at stackoverflow](https://stackoverflow.com/a/40823118/10551119), use `list[2:4][::-1]`
 
+## [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+   * Version 1 (Iterative):
+        Think from current node and its child
+        ```python
+        def invertTree(self, root: TreeNode) -> TreeNode:
+            nodes = root and [root]
+
+            while nodes:
+               nodes_child = []
+               for node in nodes:
+                   node.left, node.right = node.right, node.left
+                   if node.left:
+                       nodes_child.append(node.left)
+                   if node.right:
+                       nodes_child.append(node.right)
+               nodes = nodes_child
+            return root
+        ```
+   * Version 2:
+        Just think of the current node, similar idea as preorder traversal(见一个翻转一个)
+        ```python
+        def invertTree(self, root: TreeNode) -> TreeNode:
+           nodes = root and [root]
+           while nodes:
+               node = nodes.pop()
+               if node:
+                node.left, node.right = node.right, node.left
+                nodes += node.left, node.right
+           return root
+        ```
+
 <br>
 <br>
 <br>
