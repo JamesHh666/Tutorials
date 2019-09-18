@@ -1,4 +1,47 @@
 # 1 Tree or Binary Tree:
+## [Terminology](https://en.wikipedia.org/wiki/Tree_(data_structure)#Terminology)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/384px-Binary_tree.svg.png" alt="tree" height="200" width="240">
+
+* **Node:** A structure which may contain a value or condition6
+    * The topmost node in a tree is called the **root** node.
+    * An **internal node** (also known as an inner node, inode for short, or **branch** node) is any node of a tree that has child nodes. 
+    * An **external node** (also known as an outer node, **leaf** node, or terminal node) is any node that does not have child nodes.
+* Each node in a tree has zero or more **child** nodes
+* A node that has a child is called the child's **parent** node. A node has at most one parent.
+
+## Tree traversal（遍历）
+Traversing a tree involves iterating over all nodes in some manner.
+
+Depth-first search: 
+1. Preorder : N-L-R
+2. Inorder  : L-N-R
+3. Postorder: L-R-N
+    
+* **Preorder**
+```python
+def Preorder(root): 
+    if root: 
+        print(root.val), 
+        Preorder(root.left) 
+        Preorder(root.right) 
+```    
+    
+* **Inorder**
+```python
+def Inorder(root): 
+    if root:  
+        Inorder(root.left) 
+        print(root.val)
+        Inorder(root.right) 
+```
+* **Postorder**  
+```python
+def Postorder(root): 
+    if root: 
+        Postorder(root.left) 
+        Postorder(root.right) 
+        print(root.val), 
+```
 
 ## [104 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
