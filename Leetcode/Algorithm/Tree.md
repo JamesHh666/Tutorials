@@ -46,13 +46,17 @@ Depth-first search:
 * **Iteratively**
     * Preorder
         ```python
-        def Preorder(root): 
-            if root: 
-                print(root.val), 
-                Preorder(root.left) 
-                Preorder(root.right) 
+        def preorder(self, root):
+           r, nodes = [], root and [root]
+            while nodes:
+                node = nodes.pop()
+                r.append(node.val)
+                nodes += reversed([child for child in node.children if child])
+            return r
         ```    
-
+        **Notice:**
+        1. `nodes = root and [root]`: very cool use of `and`, see [here](https://github.com/JamesHh666/Tutorials/blob/master/Python3/%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%9A%84%E7%94%A8%E6%B3%95/Operators.md#logical-and-or-not)
+        2. `reversed()` because the node is **poped** from list, so the leftmost child needs to go in last
 
 
 ## [104 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
