@@ -279,7 +279,7 @@ class Solution(object):
 
 * and less than any key stored in the right sub-tree.
 
-<img src="https://leetcode.com/problems/search-in-a-binary-search-tree/Figures/700/bst.png" alt="BST" width="300" height="200" />
+<img src="https://leetcode.com/problems/search-in-a-binary-search-tree/Figures/700/bst.png" alt="BST" width="350" height="200" />
 
 ## [700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 ```python
