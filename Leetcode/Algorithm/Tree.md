@@ -82,7 +82,8 @@ class Solution(object):
 ## [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 ### DFS
 > **The basic block**
-> <img src="https://github.com/JamesHh666/Tutorials/blob/master/Images/58CCF8D69A16016315BAEA885A299233.png?raw=true" alt="Basic_block" width="400" height="300" />
+
+> <img src="https://github.com/JamesHh666/Tutorials/blob/master/Images/58CCF8D69A16016315BAEA885A299233.png?raw=true" alt="Basic_block" width="500" height="300" />
 
 ```python
 class Solution(object):   
