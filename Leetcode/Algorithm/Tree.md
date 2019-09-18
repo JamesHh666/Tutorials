@@ -353,7 +353,12 @@ class Solution(object):
            return root
         ```
    ### Recursive 
-   
+   ```python
+   def invertTree(self, root):
+       if root:
+           root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+           return root
+   ```
       
 <br>
 <br>
