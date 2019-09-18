@@ -16,8 +16,8 @@ Depth-first search:
 1. Inorder  : L-N-R
 2. Preorder : N-(L-R) / N-children
 3. Postorder: (L-R)-N / children-N
-* **Recursively**
-    * Inorder
+* ### **Recursively**
+    * #### Inorder
         ```python
         def Inorder(root): 
             if root:  
@@ -25,7 +25,7 @@ Depth-first search:
                 print(root.val)
                 Inorder(root.right) 
         ```
-    * Preorder
+    * #### Preorder
         * Binary tree
         ```python
         def Preorder(root): 
@@ -47,7 +47,7 @@ Depth-first search:
             return res    
         ```
     
-    * Postorder
+    * #### Postorder
         * Binary tree
         ```python
         def Postorder(root): 
@@ -65,9 +65,9 @@ Depth-first search:
                 res.append(root.val)
         ```
         
-* **Iteratively**
+* ### **Iteratively**
     `while` + `pop` + `list.extend/+=`
-    * Preorder
+    * #### Preorder
         ```python
         def Preorder(root):
             res, nodes = [], root and [root]
@@ -83,7 +83,7 @@ Depth-first search:
         1. `nodes = root and [root]`: very cool use of `and`, see [here](https://github.com/JamesHh666/Tutorials/blob/master/Python3/%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%9A%84%E7%94%A8%E6%B3%95/Operators.md#logical-and-or-not)
         2. `reversed()` because the node is **poped** from list, so the leftmost child needs to go in last
         
-    * Postorder
+    * #### Postorder
     
         If search by the order `child_left -> child_right -> node`,  the `node` needs to be preserved till all its children are traversed. 而且算法设计感觉会比较麻烦。
         逆向想想，倒过来遍历一遍，再把结果反过来，可能会方便很多。（不知道算不算小聪明？）
