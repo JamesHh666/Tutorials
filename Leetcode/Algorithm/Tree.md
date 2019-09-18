@@ -16,32 +16,44 @@ Depth-first search:
 1. Preorder : N-L-R
 2. Inorder  : L-N-R
 3. Postorder: L-R-N
-    
-* **Preorder**
-```python
-def Preorder(root): 
-    if root: 
-        print(root.val), 
-        Preorder(root.left) 
-        Preorder(root.right) 
-```    
-    
-* **Inorder**
-```python
-def Inorder(root): 
-    if root:  
-        Inorder(root.left) 
-        print(root.val)
-        Inorder(root.right) 
-```
-* **Postorder**  
-```python
-def Postorder(root): 
-    if root: 
-        Postorder(root.left) 
-        Postorder(root.right) 
-        print(root.val), 
-```
+* **Recursively**
+    * Preorder
+        ```python
+        def Preorder(root): 
+            if root: 
+                print(root.val), 
+                Preorder(root.left) 
+                Preorder(root.right) 
+        ```    
+
+    * Inorder
+        ```python
+        def Inorder(root): 
+            if root:  
+                Inorder(root.left) 
+                print(root.val)
+                Inorder(root.right) 
+        ```
+    * Postorder
+        ```python
+        def Postorder(root): 
+            if root: 
+                Postorder(root.left) 
+                Postorder(root.right) 
+                print(root.val), 
+        ```
+        
+* **Iteratively**
+    * Preorder
+        ```python
+        def Preorder(root): 
+            if root: 
+                print(root.val), 
+                Preorder(root.left) 
+                Preorder(root.right) 
+        ```    
+
+
 
 ## [104 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
