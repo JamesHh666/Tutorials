@@ -13,19 +13,10 @@
 Traversing a tree involves iterating over all nodes in some manner.
 
 Depth-first search: 
-1. Preorder : N-L-R
-2. Inorder  : L-N-R
-3. Postorder: L-R-N
+1. Inorder  : L-N-R
+2. Preorder : N-(L-R) / N-children
+3. Postorder: (L-R)-N / children-N
 * **Recursively**
-    * Preorder
-        ```python
-        def Preorder(root): 
-            if root: 
-                print(root.val), 
-                Preorder(root.left) 
-                Preorder(root.right) 
-        ```    
-
     * Inorder
         ```python
         def Inorder(root): 
@@ -34,30 +25,78 @@ Depth-first search:
                 print(root.val)
                 Inorder(root.right) 
         ```
+    * Preorder
+        * Binary tree
+        ```python
+        def Preorder(root): 
+            if root: 
+                print(root.val), 
+                Preorder(root.left) 
+                Preorder(root.right) 
+        ```    
+        * N-ary tree
+        ```python
+        def Postorder(root: 'Node') -> List[int]:
+            def recur(root, res):
+                 if root:
+                    res.append(root.val)
+                    for child in root.children:
+                        Preorder(child, res)
+            res = []
+            recur(root, res)
+            return res    
+        ```
+    
     * Postorder
+        * Binary tree
         ```python
         def Postorder(root): 
             if root: 
                 Postorder(root.left) 
                 Postorder(root.right) 
-                print(root.val), 
+                print(root.val)
+        ```
+        * N-ary tree
+        ```python
+        def recur(root, res):
+            if root:
+                for child in root.children:
+                    recur(child, res)
+                res.append(root.val)
         ```
         
 * **Iteratively**
+    `while` + `pop` + `list.extend/+=`
     * Preorder
         ```python
-        def preorder(self, root):
-           r, nodes = [], root and [root]
+        def Preorder(root):
+            res, nodes = [], root and [root]
+
             while nodes:
                 node = nodes.pop()
-                r.append(node.val)
+                res.append(node.val)
                 nodes += reversed([child for child in node.children if child])
-            return r
+            return res
         ```    
+        
         **Notice:**
         1. `nodes = root and [root]`: very cool use of `and`, see [here](https://github.com/JamesHh666/Tutorials/blob/master/Python3/%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%9A%84%E7%94%A8%E6%B3%95/Operators.md#logical-and-or-not)
         2. `reversed()` because the node is **poped** from list, so the leftmost child needs to go in last
+        
+    * Postorder
+    
+        If search by the order `child_left -> child_right -> node`,  the `node` needs to be preserved till all its children are traversed. 而且算法设计感觉会比较麻烦。
+        逆向想想，倒过来遍历一遍，再把结果反过来，可能会方便很多。（不知道算不算小聪明？）
+        ```python
+        def Postorder(self, root: 'Node') -> List[int]:
+            res, nodes = [], root and [root]
 
+            while nodes:
+                node = nodes.pop()
+                res.append(node.val)
+                nodes += [child for child in node.children if child]
+            return reversed(res)
+        ```    
 
 ## [104 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
