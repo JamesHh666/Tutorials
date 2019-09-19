@@ -20,5 +20,67 @@
 	* Use a pointer `p` to track iteration.
 	* Return `head_fake.next`
 	
-* ## [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+* ## [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+	* 暴力解法
+		```python
+		def middleNode(self, head: ListNode) -> ListNode:
+			l = []
+			p = head
+			while p:
+				l.append(p.val)
+				p = p.next
+			idx = (len(l) // 2) if len(l)%2 == 1 else ((len(l)+1) // 2)
+			del l
+
+			i = 0
+			ans = head
+			while i!= idx:
+				ans = ans.next
+				i += 1
+			return ans
+		```
+	* **time:** `O(N)`, **space:**`O(N)`:
+	
+		find all nodes and return the middle one.
+		```python
+		def middleNode(self, head: ListNode) -> ListNode:
+			l = [head]
+			while l[-1].next:
+				l.append(l[-1].next)
+			return l[len(l) // 2]
+		```
+	* **time:** `O(N)`, **space:**`O(1)`:
+	
+		use two pointers `tmp` and `head` to track the process, if `tmp` find the end of the linked list, then `head` is in the middle of the list.
+		```python
+		def middleNode(self, head: ListNode) -> ListNode:
+			tmp = head
+			while tmp and tmp.next:
+				head = head.next
+				tmp = tmp.next.next
+			return head
+		```
+	
+* ## [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+	Reverse a singly linked list.
+	* 暴力解法
+		```python
+		def reverseList(self, node: ListNode) -> ListNode:
+			if not node or not node.next:
+				return node
+			curr = node
+			head = curr.next
+			curr.next = None
+			while 1:
+				temp = head.next
+				head.next = curr
+				if not temp:
+					break
+				else:
+					curr, head = head, temp
+			return head
+		```
+	
+	
 	
