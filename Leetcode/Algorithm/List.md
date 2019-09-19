@@ -11,6 +11,7 @@
             if p.next.val == val:
                 p.next = p.next.next
             else:
+	        p = p.next
         return head_fake.next
 	```
 	
