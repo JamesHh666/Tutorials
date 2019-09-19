@@ -64,7 +64,7 @@
 * ## [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 	Reverse a singly linked list.
-	* 暴力解法
+	* 暴力解法 (TOO redundant)
 		```python
 		def reverseList(self, node: ListNode) -> ListNode:
 			if not node or not node.next:
@@ -81,6 +81,17 @@
 					curr, head = head, temp
 			return head
 		```
-	
+		
+	* [A better one ](https://leetcode.com/problems/reverse-linked-list/discuss/140916/Python-Iterative-and-Recursive-(206))
+		```python
+		def reverseList(self, node: ListNode) -> ListNode:
+			prev = None
+			while node:
+				curr = node
+				node = node.next
+				curr.next = prev
+				prev = curr
+			return prev
+		```
 	
 	
