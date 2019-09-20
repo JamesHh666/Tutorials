@@ -20,6 +20,33 @@
 	* Use a pointer `p` to track iteration.
 	* Return `head_fake.next`
 	
+* ## [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+	* 暴力解法：
+	
+		Set two pointers `cur` and `p`:
+		* `cur` points to current non-duplicated node in the list 
+		* `p` points to the duplicated nodes and is used to skip those nodes
+	
+		```python
+		def deleteDuplicates(self, head: ListNode) -> ListNode:
+			fake_head = ListNode(-1)
+			fake_head.next = head
+			p = cur = fake_head
+			while cur.next:
+				if not cur.next.next:
+					break
+				if cur.next.val == cur.next.next.val:
+					p = cur.next
+					while p.next and p.next.val == p.val:
+						p = p.next
+					cur.next = p.next
+				else:
+					cur = cur.next
+
+			return fake_head.next
+		```
+	
+	
 * ## [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
 	* 暴力解法
 		```python
@@ -94,4 +121,5 @@
 			return prev
 		```
 	
-	
+
+
