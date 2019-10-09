@@ -13,5 +13,7 @@
       colors = [[item / 255 for item in subl] for subl in colors]
     ```
  
-## Body parts
-1. Plot body parts using **plt.plot**
+## Drawing
+1. Plot **body parts** using *plt.plot* instead of *plt.scatter*
+
+2. 
