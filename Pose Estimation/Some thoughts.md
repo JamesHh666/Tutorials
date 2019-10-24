@@ -14,6 +14,6 @@
     ```
  
 ## Drawing
-1. Plot **body parts** using *plt.plot* instead of *plt.scatter*
+1. Plot **body parts** using *plt.plot* instead of *plt.scatter* (if *plt.scatter* draw points on the edge, they will become ellipse instead of a circle)
 
 2. 
