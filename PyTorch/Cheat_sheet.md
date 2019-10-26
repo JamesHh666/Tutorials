@@ -1,4 +1,4 @@
-The document is [here](https://pytorch.org/docs/stable/torch.html#)
+The official cheat sheet is [here](https://pytorch.org/tutorials/beginner/ptcheat.html)
 
 # Tensor
 Tensors `x` are similar to NumPy’s ndarrays, with the addition being that Tensors can also be used on a GPU to accelerate computing.
