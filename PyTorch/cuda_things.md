@@ -1,4 +1,4 @@
-1 Change cuda version:
+## 1 Change cuda version:
 put in ~/.bashrc (Ubuntu)
 ``` bash
 export CUDA_HOME="/usr/local/cuda-10.0"
