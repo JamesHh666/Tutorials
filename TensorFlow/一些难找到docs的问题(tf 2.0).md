@@ -17,3 +17,9 @@ Just use `tf.reduce_sum`
 ```python
 list_sum = tf.reduce_sum(list_of_tensors)
 ```
+
+# 3 `model.optimizer` is None
+[Keras Model](https://keras.io/models/model/)
+```python
+model.compile(optimizer)
+```
