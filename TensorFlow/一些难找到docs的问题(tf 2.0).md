@@ -23,3 +23,19 @@ list_sum = tf.reduce_sum(list_of_tensors)
 ```python
 model.compile(optimizer)
 ```
+
+# 4 Tensorboard:
+* 1 `ValueError: Duplicate plugins for name projector`</br>
+Refer to [this](https://stackoverflow.com/a/58743709/10551119), check tensorboard versions and remove the redundant versions.
+```python 
+import pkg_resources
+
+for entry_point in pkg_resources.iter_entry_points('tensorboard_plugins'):
+    print(entry_point.dist)
+```
+
+# 5 Keras 
+* 1 `ImportError: Failed to import pydot. You must install pydot and graphviz for pydotprint to work.`
+On windows 10:`conda install graphviz`
+
+
