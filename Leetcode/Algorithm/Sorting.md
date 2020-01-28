@@ -90,7 +90,7 @@ def merge_sort(a: list):
     return devide(a)
 ```
 
-## 6 Quick Sort:
+### 6 Quick Sort:
 ```python
 def quick_sort(a: list):
     less = []
@@ -138,7 +138,7 @@ def heap_sort(a: list):
     return a
 ```
 
-## Linear Sort
+## *Linear Sort*
 ### 8 Counting sort: *O(n+k)*
 ```python
 def counting_sort(a: list):
@@ -159,9 +159,6 @@ def counting_sort(a: list):
 ```
 
 ### 9 Bucket Sort
-```python
-
-```
 
 ### 10 Radix Sort
 ```python
