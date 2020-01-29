@@ -1,8 +1,8 @@
 # Sorting algorithom in python
 ## Some resources
-[JS-Sorting-Algorithm](https://github.com/hustcc/JS-Sorting-Algorithm)
-[Interview Cake](https://www.interviewcake.com/sorting-algorithm-cheat-sheet)
-[Yusuf Shakeel](https://www.youtube.com/watch?v=y_Nuui4Qf-k&list=PLG6ePePp5vvYVEjRanyndt7ZSqTzillom&index=11)
+[JS-Sorting-Algorithm](https://github.com/hustcc/JS-Sorting-Algorithm):blue_book:</br>
+[Interview Cake](https://www.interviewcake.com/sorting-algorithm-cheat-sheet):green_book:</br>
+[Yusuf Shakeel](https://www.youtube.com/watch?v=y_Nuui4Qf-k&list=PLG6ePePp5vvYVEjRanyndt7ZSqTzillom&index=11):film_strip:</br>
 
 
 ## *O(n<sup>2</sup>)*
