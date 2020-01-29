@@ -38,4 +38,7 @@ for entry_point in pkg_resources.iter_entry_points('tensorboard_plugins'):
 * 1 `ImportError: Failed to import pydot. You must install pydot and graphviz for pydotprint to work.`
 On windows 10:`conda install graphviz`
 
+# 6 Compute l2-nrom loss using `tf.norm` but get warning/failure:
+Change `ord=2` to `ord="euclidean"`  :confused:
+
 
