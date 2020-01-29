@@ -1,4 +1,10 @@
 # Sorting algorithom in python
+## Some resources
+[JS-Sorting-Algorithm](https://github.com/hustcc/JS-Sorting-Algorithm)
+[Interview Cake](https://www.interviewcake.com/sorting-algorithm-cheat-sheet)
+[Yusuf Shakeel](https://www.youtube.com/watch?v=y_Nuui4Qf-k&list=PLG6ePePp5vvYVEjRanyndt7ZSqTzillom&index=11)
+
+
 ## *O(n<sup>2</sup>)*
 ### 1 Bubble: 
 ```python
