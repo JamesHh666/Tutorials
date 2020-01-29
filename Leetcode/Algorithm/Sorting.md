@@ -161,8 +161,26 @@ def counting_sort(a: list):
 ### 9 Bucket Sort
 
 ### 10 Radix Sort
+Thanks to [this](https://github.com/hustcc/JS-Sorting-Algorithm/blob/master/10.radixSort.md#4-python-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0)
 ```python
+def find_radix(num: int, digit: int):
+    return (num // 10 ** digit) % 10
 
+def radix_sort(a: list):
+    max_digit = 0
+    max_value = max(a)
+    while 10 ** max_digit < max_value:
+        max_digit += 1  # max=99, max_digit=3
+    for digit in range(max_digit):
+        buckets = [[] for _ in range(10)]
+        for num in a:
+            radix = find_radix(num, digit)
+            buckets[radix].append(num)
+        a = []    
+        for bucket in buckets:
+            for num in bucket:
+                a.append(num)
+    return a
 ```
 
 ## A small test function :poop:
